@@ -1,0 +1,41 @@
+getForecast = async () =>{
+    console.log("5 Day Forecast");
+    let fiveDayForecast = 'http://api.openweathermap.org/data/2.5/forecast?q='+this.state.city+',nl&appid='+this.state.apiKey;
+    console.log(fiveDayForecast);
+    let response = await fetch (fiveDayForecast);
+    let jsonObject = await response.json();
+
+    this.setState({wheaterData:jsonObject});
+    // console.log("Forecast: ",this.state.wheaterData.list[5].dt_txt);
+    let newTestArray = [];
+    let dateArray = [];
+    let tempArray = [];
+    let celcius = "";
+    let celciusRound = "";
+
+
+
+    for (var i = 0; i < this.state.wheaterData.list.length; i++) {
+        celcius = this.state.wheaterData.list[i].main.temp - this.state.kelvin;
+        celciusRound = celcius.toFixed(0);
+        let date = this.state.wheaterData.list[i].dt_txt.split(' ');
+
+        // console.log(date[0]+ " "+ celciusRound);
+        newTestArray.push({"date": date[0],"time": date[1], "Temperatuur": celciusRound});
+        dateArray.push(date[0]);
+        tempArray.push(celciusRound);
+    }
+
+    const uniqueNames = dateArray.filter((val, id, array) => {
+       return array.indexOf(val) == id;
+    });
+
+
+
+    // console.log(uniqueNames);
+    // console.log(dateArray);
+    this.setState({
+        forecasttest2: uniqueNames,
+    })
+
+}

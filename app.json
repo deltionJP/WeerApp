@@ -1,0 +1,16 @@
+{
+   "expo": {
+    "name": "JP-Weather",
+    "version": "1.0.0",
+    "slug": "JP-Weather",
+    "sdkVersion": "27.0.0",
+    "icon": "./assets/iconapp.png",
+
+    "ios": {
+      "bundleIdentifier": "com.yourcompany.yourappname"
+    },
+    "android": {
+      "package": "com.pasman.Weather"
+    }
+   }
+ }

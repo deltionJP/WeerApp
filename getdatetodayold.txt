@@ -1,0 +1,27 @@
+// getDateToday(){
+    // var dateFormat = require('dateformat');
+    // dateFormat.i18n = {
+    //     dayNames: [
+    //         'Zon.','Ma.','Di.','Wo.','Don.','Vr.','Za.',
+    //         'Zondag','Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag'
+    //     ],
+    //     monthNames: [
+    //         'Jan.','Feb.','Ma','Apr','Mei','Jun','Jul.','Aug','Sept.','Okt.','Nov.','Dec.',
+    //         'Januari','Februari','Maart','April','Mei','Juni','Julli','Augustus','Semptember','Oktober','November','December'
+    //     ],
+    //     timeNames: [
+    //         'a', 'p', 'am', 'pm', 'A', 'P', 'AM', 'PM'
+    //     ]
+    // };
+    // var dateFormat = require('dateformat');
+    // var now = new Date();
+    //
+    // console.log(dateFormat(now, "dddd d mmmm yyyy, HH:mm:ss "));
+    // // let theDateToday = dateFormat(now, "dddd d mmmm yyyy");
+    // let theDateToday = dateFormat(now, "dddd d mmmm ");
+    // let theTimeNow = dateFormat(now, " HH:mm:ss ")
+
+    // this.setState({
+    //     currentDate: "Vrijdag 22 juni 2018"
+    // });
+// }
